@@ -1,23 +1,28 @@
 import { useState } from "react";
-import { etusivu } from "./pages/etusivu";
-import { general } from "./views/General";
+import { Etusivu } from "./pages/etusivu/etusivu";
+import { General } from "./views/general/General";
+import type { view } from "./customtypes/types";
+import { Frame } from "./pages/etusivu/mainpage/Frame";
 
 function App() {
   const [page, setPage] = useState<"intro" | "other">("intro");
-  const [view, setView] = useState<"General" | "Kartta" | "Map" | "Plotter" | "Timeline">("General");
-
-  // Handle navigation based on state changes
-  // For simplicity, trigger navigate on state change
+  const [view, setView] = useState<view>("General");
 
   if (page === "intro") {
-    return etusivu({ setPage });
+    return <Etusivu setPage={setPage} />;
   }
+  
+  return (
+    <div style={{ display: "flex", flexDirection: "column", minHeight: "100vh" }}>
+      <div style={{ flex: 1 }}>
+        {view === "General" && <General />}
+        {view === "Plotter" && <div>Plotter View</div>}
+      </div>
 
-  if (view === "General") {
-    return general();
-  }
-
-  return null;
+      <Frame setView={setView} />
+    </div>
+  );
+  
 }
 
 export default App;
