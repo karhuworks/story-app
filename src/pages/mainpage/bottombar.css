@@ -1,0 +1,37 @@
+:root {
+  --border-color: hsl(80, 3%, 40%);
+  --background-color: hsla(49, 40%, 76%, 0.90);
+}
+
+.bottom-bar {
+  display: grid;
+  justify-content: center;
+  gap: 0;
+  padding: 0;
+  background-color: var(--background-color);
+  border-top: 1px solid var(--border-color);
+  position: sticky;
+  bottom: 0;
+  border-radius: 0;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+}
+
+.bottom-bar button {
+  padding: 0.7rem 1rem;
+  margin: 0;
+  border: var(--border-color) 1px solid;
+  border-radius: 0;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.bottom-bar button:active,
+.bottom-bar button:focus,
+.bottom-bar button:focus-visible {
+  background: transparent;
+  outline: none;
+  box-shadow: none;
+}

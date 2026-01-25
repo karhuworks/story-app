@@ -1,0 +1,12 @@
+{
+  "buttons": [
+    {
+      "name": "General",
+      "targetView": "General"
+    },
+    {
+      "name": "Plotter",
+      "targetView": "Plotter"
+    }
+  ]
+}
