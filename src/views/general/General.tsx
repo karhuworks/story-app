@@ -1,6 +1,6 @@
 import content from "./content.json";
 
-export function general() {
+export function General() {
   return (
     <div style={{ 
       display: 'flex',

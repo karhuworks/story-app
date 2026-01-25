@@ -1,8 +1,12 @@
+
 import { useState } from "react";
+import type { view } from "./customtypes/types";
+import { Frame } from "./pages/mainpage/Frame";
 import { Etusivu } from "./pages/etusivu/etusivu";
 import { General } from "./views/general/General";
-import type { view } from "./customtypes/types";
-import { Frame } from "./pages/etusivu/mainpage/Frame";
+import { Plotter } from "./views/plotter/Plotter";
+import { Kartta } from "./views/kartta/Kartta";
+import { Timeline } from "./views/timeline/Timeline";
 
 function App() {
   const [page, setPage] = useState<"intro" | "other">("intro");
@@ -16,7 +20,9 @@ function App() {
     <div style={{ display: "flex", flexDirection: "column", minHeight: "100vh" }}>
       <div style={{ flex: 1 }}>
         {view === "General" && <General />}
-        {view === "Plotter" && <div>Plotter View</div>}
+        {view === "Plotter" && <Plotter />}
+        {view === "Map" && <Kartta />}
+        {view === "Timeline" && <Timeline />}
       </div>
 
       <Frame setView={setView} />
@@ -26,3 +32,4 @@ function App() {
 }
 
 export default App;
+

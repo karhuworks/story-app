@@ -4,7 +4,7 @@ interface EtusivuProps {
   setPage: React.Dispatch<React.SetStateAction<"intro" | "other">>;
 }
 
-export function etusivu({ setPage }: EtusivuProps) {   
+export function Etusivu({ setPage }: EtusivuProps) {   
    return (
       <div style={{
         display: 'flex',

@@ -1,5 +1,5 @@
 import { buttons, type BottomBarButton } from "./content";
-import type { view } from "../../../customtypes/types";
+import type { view } from "../../customtypes/types";
 
 interface FrameProps {
   setView: React.Dispatch<React.SetStateAction<view>>;
@@ -12,9 +12,9 @@ export function Frame({ setView }: FrameProps) {
         display: 'flex',
         justifyContent: 'center',
         gap: '1rem',
-        padding: '1rem',
-        backgroundColor: 'rgba(255,255,255,0.9)',
-        boxShadow: '0 -2px 5px rgba(0,0,0,0.2)',
+        padding: '0.5rem',
+        backgroundColor: 'hsla(49, 40%, 76%, 0.90)',
+        borderTop: '1px solid rgb(68, 68, 68)',
         position: 'sticky',
         bottom: 0,
       }}
