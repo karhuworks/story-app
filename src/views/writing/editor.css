@@ -1,3 +1,4 @@
+
 /* Target TipTap / ProseMirror editor */
 .ProseMirror {
   min-height: 100%;        /* Fill available editor space */
@@ -7,14 +8,13 @@
   font-family: 'Georgia', 'Times New Roman', serif; /* Writer-friendly font */
   padding: 1rem;           /* Space inside editor */
   color: #111;             /* Dark text */
-  background-color: hsl(40, 57%, 86%);  /* Optional: white background */
   word-wrap: break-word;   /* Avoid horizontal scroll */
   margin: 0;
 }
 
 /* Paragraph spacing */
 .ProseMirror p {
-  margin: 0 0 1em; /* Space between paragraphs */
+  margin: 0 0 0; /* Space between paragraphs */
 }
 
 /* Optional: Headings */
@@ -40,7 +40,7 @@
   height: 100%;
   width: 100%;
   overflow-y: auto;
-  background-color: #f5f5f5; /* outer background */
+  background-color: lab(95.56% 0.62 11.58); 
   padding: 1rem;
   box-sizing: border-box;
 }

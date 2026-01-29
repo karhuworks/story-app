@@ -1,3 +1,6 @@
+//ETUSIVU 
+// yksinkertaisesti etusivu, sisäänkirjautuminen, subcribtion options
+
 import content from './content.json';
 import type { page } from '../../customtypes/types';
 

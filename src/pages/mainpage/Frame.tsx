@@ -1,3 +1,6 @@
+//FRAME 
+//bottom bar navigation
+
 import { buttons, type BottomBarButton } from "./content";
 import type { view } from "../../customtypes/types";
 import './bottombar.css';

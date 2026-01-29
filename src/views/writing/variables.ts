@@ -1,6 +1,11 @@
-export const paneelienVali = "4px";
-export const resizercolor = "#ccc";
+//WRITING VIEW VARIABLES
+
+
+export const paneelit = {
+  paneelienVali: "4px",
+  resizercolor: "#ccc",
+} 
 
 export const editor = {
-  backgroundColor: "#ffffff",
+  backgroundColor: "rgb(255, 255, 255)",
 }

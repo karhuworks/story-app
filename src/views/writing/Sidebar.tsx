@@ -1,4 +1,7 @@
-import type { Node } from "../../models/Node";
+import { useState } from "react";
+import type { FolderNode, DocumentNode } from "../../models/Node";
+import { addNode } from "../../functions/Nodes";
+import { initialRoot } from "../../models/Node";
 
 interface Props {
   node: Node;
@@ -6,6 +9,14 @@ interface Props {
 }
 
 export function Sidebar() {
+
+  const [root, setRoot] = useState<FolderNode>(initialRoot);
+  const [activeFolderId, setActiveFolderId] = useState<string>(initialRoot.id);
+
+  const handleSelect = (node: FolderNode | DocumentNode) => {
+    setActiveFolderId(node.id);
+  };
+
   return (
     <div style={{
       backgroundColor: "#f0f0f0",
@@ -13,6 +24,30 @@ export function Sidebar() {
       borderRight: "1px solid #ccc"
     }}>
       <h2>Sidebar</h2>
+      <button onClick={() => {
+        const newNode: FolderNode = {
+          id: Date.now().toString(),
+          name: "New Folder",
+          type: "folder",
+          children: [],
+        };
+
+        setRoot(prev => addNode(prev, activeFolderId, newNode));
+
+      }}
+        >+ New Folder</button>
+
+            {/* Render the folder tree */}
+      <div style={{ marginTop: "1rem" }}>
+        {root.children.map(child => (
+          <SidebarNode
+            key={child.id}
+            node={child}
+            onSelect={handleSelect}
+          />
+        ))}
+      </div>
+
     </div>
   );
 }
