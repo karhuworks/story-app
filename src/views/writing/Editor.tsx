@@ -1,5 +1,6 @@
 import { EditorContent, useEditor } from "@tiptap/react";
 import StarterKit from "@tiptap/starter-kit";
+import "./layout.css";
 
 export function Editor() {
   const editor = useEditor({
@@ -12,7 +13,7 @@ export function Editor() {
   }
 
   return (
-    <div style={{ padding: "1rem", height: "100%", overflowY: "auto" }}>
+    <div className="editor">
       <EditorContent editor={editor} />
     </div>
   );
