@@ -4,7 +4,7 @@ import StarterKit from "@tiptap/starter-kit";
 export function Editor() {
   const editor = useEditor({
     extensions: [StarterKit],
-    content: "<p>Start writing...</p>",
+    content: "<p></p>",
   });
 
   if (!editor) {

@@ -3,6 +3,7 @@ import { Sidebar } from "./Sidebar";
 import { Notebox } from "./Notebox";
 import { Editor } from "./Editor";  
 import { paneelienVali, resizercolor } from "./variables";
+import "./layout.css";
 
 
 export function WritingView() {

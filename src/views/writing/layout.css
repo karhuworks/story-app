@@ -1,11 +1,36 @@
-
+/* Target TipTap / ProseMirror editor */
 .ProseMirror {
-  min-height: 100%;
-  outline: none;
-  font-size: 1rem;
-  line-height: 1.6;
+  min-height: 100%;        /* Fill available editor space */
+  outline: none;           /* Remove blue outline on focus */
+  font-size: 1.1rem;       /* Slightly larger font for readability */
+  line-height: 1.6;        /* Comfortable line spacing */
+  font-family: 'Georgia', 'Times New Roman', serif; /* Writer-friendly font */
+  padding: 1rem;           /* Space inside editor */
+  color: #111;             /* Dark text */
+  background-color: #fff;  /* Optional: white background */
+  word-wrap: break-word;   /* Avoid horizontal scroll */
 }
 
+/* Paragraph spacing */
 .ProseMirror p {
-  margin: 0 0 1em;
+  margin: 0 0 1em; /* Space between paragraphs */
+}
+
+/* Optional: Headings */
+.ProseMirror h1,
+.ProseMirror h2,
+.ProseMirror h3 {
+  margin: 1em 0 0.5em;
+  font-weight: bold;
+}
+
+/* Optional: focus-friendly cursor */
+.ProseMirror:focus {
+  caret-color: #333;
+}
+
+/* Optional: images inside editor */
+.ProseMirror img {
+  max-width: 100%;
+  height: auto;
 }
