@@ -1,6 +1,6 @@
 import content from "./content.json";
 
-export function Timeline() {
+export function MapView() {
   return (
     <div style={{ 
       display: 'flex',

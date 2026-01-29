@@ -1,6 +1,6 @@
 import content from "./content.json";
 
-export function General() {
+export function TimelineView() {
   return (
     <div style={{ 
       display: 'flex',

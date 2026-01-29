@@ -1,15 +1,15 @@
-
 import { useState } from "react";
-import type { view } from "./customtypes/types";
+import type { view, page } from "./customtypes/types";
 import { Frame } from "./pages/mainpage/Frame";
 import { Etusivu } from "./pages/etusivu/etusivu";
-import { General } from "./views/general/General";
-import { Plotter } from "./views/plotter/Plotter";
-import { Kartta } from "./views/kartta/Kartta";
-import { Timeline } from "./views/timeline/Timeline";
+import { GeneralView } from "./views/general/GeneralView";
+import { PlotterView } from "./views/plotter/PlotterView";
+import { WritingView } from "./views/writing/WritingView";
+import { MapView } from "./views/map/MapView";
+import { TimelineView } from "./views/timeline/TimelineView";
 
 function App() {
-  const [page, setPage] = useState<"intro" | "other">("intro");
+  const [page, setPage] = useState<page>("intro");
   const [view, setView] = useState<view>("General");
 
   if (page === "intro") {
@@ -19,10 +19,11 @@ function App() {
   return (
     <div style={{ display: "flex", flexDirection: "column", minHeight: "100vh" }}>
       <div style={{ flex: 1 }}>
-        {view === "General" && <General />}
-        {view === "Plotter" && <Plotter />}
-        {view === "Map" && <Kartta />}
-        {view === "Timeline" && <Timeline />}
+        {view === "General" && <GeneralView />}
+        {view === "Plotter" && <PlotterView />}
+        {view === "Map" && <MapView />}
+        {view === "Timeline" && <TimelineView />}
+        {view === "Writing" && <WritingView />}
       </div>
 
       <Frame setView={setView} />

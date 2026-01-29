@@ -1,7 +1,8 @@
 import content from './content.json';
+import type { page } from '../../customtypes/types';
 
 interface EtusivuProps {
-  setPage: React.Dispatch<React.SetStateAction<"intro" | "other">>;
+  setPage: React.Dispatch<React.SetStateAction<page>>;
 }
 
 export function Etusivu({ setPage }: EtusivuProps) {   
@@ -24,7 +25,7 @@ export function Etusivu({ setPage }: EtusivuProps) {
           marginBottom: '2rem'
         }}>{content.otsikko}</header>
         <button 
-          onClick={() => setPage("other")}
+          onClick={() => setPage("project")}
           style={{
             fontSize: '1.5rem',
             padding: '1rem 2rem',

@@ -1,6 +1,6 @@
 import content from "./content.json";
 
-export function Plotter() {
+export function GeneralView() {
   return (
     <div style={{ 
       display: 'flex',
